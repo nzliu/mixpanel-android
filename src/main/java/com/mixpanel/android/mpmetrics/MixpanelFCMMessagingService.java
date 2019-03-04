@@ -110,10 +110,9 @@ public class MixpanelFCMMessagingService extends FirebaseMessagingService {
         public static final int NOT_SET = -1;
     }
 
-    @Override
-    public void onMessageReceived(RemoteMessage remoteMessage) {
+    public void onMessageReceived(RemoteMessage remoteMessage, Context context) {
         super.onMessageReceived(remoteMessage);
-        Context context = getApplicationContext();
+        // Context context = getApplicationContext();
         final MPConfig config = MPConfig.getInstance(context);
         String resourcePackage = config.getResourcePackageName();
         if (null == resourcePackage) {
