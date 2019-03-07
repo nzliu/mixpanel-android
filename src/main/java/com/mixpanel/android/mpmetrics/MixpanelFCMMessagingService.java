@@ -413,6 +413,7 @@ public class MixpanelFCMMessagingService extends FirebaseMessagingService {
 
         if (messageId != null) {
             ret.putExtra("mp_message_id", messageId);
+            ret.putExtra("notificationId", messageId);
         }
 
         if (extraLogData != null) {
